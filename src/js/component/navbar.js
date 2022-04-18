@@ -5,7 +5,7 @@ import "../../styles/navbar.css"
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar mb-3">
 			<Link to="/">
 				<img src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-0.png" className="star-wars-logo ms-3"/>
 			</Link>

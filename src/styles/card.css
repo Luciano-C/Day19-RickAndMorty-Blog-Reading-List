@@ -1,11 +1,13 @@
 .card {
     width: 15vw;
-    height: 23vw;
+    height: 26vw;
     background-color: gray;
     color:white;
     margin-right: 1.5vw;
     margin-bottom: 2vw;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .favorite {
@@ -16,7 +18,6 @@
     font-size: 1.3vw;
     padding-top: 1%;
     border-radius: 0.3vw;
-    transition: 0.5s;
     margin:0vw 2vw 1vw 0;
 }
 
@@ -35,7 +36,6 @@
    margin: 0vw 0 1vw 2vw;
    padding: 0.5vw;
    text-align: center;
-   transition: 0.5s;
    background-size: 200% auto;
    color: white;            
    /* box-shadow: 0 0 20px #eee; */
@@ -49,6 +49,15 @@
    text-decoration: none;
  }
 
+* {
+  font-size: 1vw;
+}
 
+.card-img-top {
+  height: 12vw;
+  width: auto;
+  object-fit: cover;
+  
+}
 
  
