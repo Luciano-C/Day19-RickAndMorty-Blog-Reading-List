@@ -1,12 +1,11 @@
-body {
-    display: flex;
-    justify-content: center;
-}
+
 
 .cardGroupContainer {
     display: flex;
     justify-content: center;
     overflow-x: scroll;
-    max-width: 100vw;
+    max-width: 80vw;
+    scrollbar-color: purple rgb(26, 1, 73);
 }
+
 
