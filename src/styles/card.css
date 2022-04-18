@@ -1,0 +1,52 @@
+.card {
+    width: 18rem;
+    background-color: gray;
+    color:white;
+}
+
+.favorite {
+    color: yellow;
+    border: solid 1px yellow;
+    width: 2.5vw;
+    height: 2.5vw;
+    font-size: 1.3vw;
+    padding-top: 1%;
+    border-radius: 0.3vw;
+    transition: 0.5s;
+    margin:0.5vw;
+}
+
+.favorite:hover {
+    color: black;
+    background-color: yellow;
+    background-image: linear-gradient(to right, #f7e707 0%, #fcff44  51%, #f7e707  100%);
+    background-position: right center;
+    
+} 
+
+
+
+.btn-grad {background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
+.btn-grad {
+   margin: 0.5vw;
+   padding: 0.5vw;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   /* box-shadow: 0 0 20px #eee; */
+   border-radius: 0.3vw;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
+ 
+      
+  
