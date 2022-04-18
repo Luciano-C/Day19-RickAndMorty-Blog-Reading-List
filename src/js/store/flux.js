@@ -14,12 +14,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			], 
 			favoritesList: [
-				{nombre: "Luke Skywalker"}	
+				{name: "Luke Skywalker"}	
 			] 
 		},
 		 
 
 		actions: {
+			
+			deleteFavorite: (nameToDelete) => {
+				const store = getStore();
+				/* const favorites = store.favoritesList.filter(x => x.name !== nameToDelete);
+				setStore({favoritesList: favorites}); */
+				alert(nameToDelete)
+
+			},
+			
+			
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

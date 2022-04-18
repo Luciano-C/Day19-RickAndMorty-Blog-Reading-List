@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.css"
 
-
+import { Context } from "../store/appContext";
 
 const DropdownItem = (props) => {
+	
+	const { store, actions } = useContext(Context);
+	
+
 	return (
 		<div className="d-flex justify-content-around">
 			<span>{props.name}</span>
-			<span><i className="fas fa-trash"></i></span>
+			<span ><button onClick={actions.deleteFavorite(props.name)}><i className="fas fa-trash"></i></button></span>
 		</div>
 	)
 }
@@ -18,6 +22,10 @@ const DropdownItem = (props) => {
 
 
 export const Navbar = () => {
+	
+	const { store, actions } = useContext(Context);
+	
+	
 	return (
 		<nav className="navbar mb-3">
 			<Link to="/">
@@ -31,7 +39,7 @@ export const Navbar = () => {
 						Favorites
 					</button>
 					<ul className="dropdown-menu dropdown-menu-start">
-						<DropdownItem name="Luke Skywalker" />
+						{store.favoritesList.map((x, i) => <li key={i}><DropdownItem name={x.name}/></li>)}
 					</ul>
 				</div>
 
