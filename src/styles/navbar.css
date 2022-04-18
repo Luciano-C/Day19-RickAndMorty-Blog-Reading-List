@@ -1,0 +1,13 @@
+.star-wars-logo {
+    width: 8vw;
+    height: 4vw;
+    object-fit: cover;
+}
+
+
+.navbar {
+    background-image: url("../img/starwars-background.JPG");
+}
+
+
+

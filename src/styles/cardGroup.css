@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.cardGroupContainer {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    max-width: 100vw;
+}
+

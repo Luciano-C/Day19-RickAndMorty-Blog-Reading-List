@@ -5,14 +5,15 @@ import { Card } from "../component/card"
 import { Context } from "../store/appContext";
 
 import "../../styles/home.css";
+import CardGroup from "../component/cardgroup";
 
 
 export const Home = () => {
 	/* const { store, actions } = useContext(Context); */
 
 	return (
-		<div className="cardBackground">
-            <Card />
+		<div>
+            <CardGroup/>
 		</div>
 	);
 };
