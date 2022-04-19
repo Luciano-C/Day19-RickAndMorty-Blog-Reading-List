@@ -23,10 +23,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			deleteFavorite: (nameToDelete) => {
 				const store = getStore();
-				/* const favorites = store.favoritesList.filter(x => x.name !== nameToDelete);
-				setStore({favoritesList: favorites}); */
-				alert(nameToDelete)
-
+				const favorites = store.favoritesList.filter(x => x.name !== nameToDelete);
+				setStore({favoritesList: favorites});
 			},
 			
 			
