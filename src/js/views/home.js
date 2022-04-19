@@ -13,7 +13,7 @@ export const Home = () => {
 
 	return (
 		<div>
-            <CardGroup/>
+            <CardGroup title="Characters"/>
 		</div>
 	);
 };

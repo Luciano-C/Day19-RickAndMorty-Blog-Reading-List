@@ -3,7 +3,7 @@ import { Card } from "./card";
 import "../../styles/cardGroup.css"
 
 
-const CardGroup = () => {
+const CardGroup = (props) => {
 
     let characters = [
         { name: "Yoda", gender: "Male", hair: "Grey", eyes: "Green", src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yoda-1568794702.jpeg?crop=0.502xw:1.00xh;0.321xw,0&resize=640:*" },
@@ -12,11 +12,15 @@ const CardGroup = () => {
     ]
 
     return (
-        <div className="container d-flex justify-content-center">
-            <ul className="cardGroupContainer">
-                {characters.map((x, i) => <Card key={i} name={x.name} gender={x.gender} hair={x.hair} eyes={x.eyes} src={x.src} />)}
-            </ul>
+        <div className="container d-flex flex-column text-start fst-italic fw-bold">
+            <h2>{props.title}</h2>
+            <div className="d-flex justify-content-center">
+                <ul className="cardGroupContainer">
+                    {characters.map((x, i) => <Card key={i} char_1="Gender" char_2="Hair" char_3="Eyes" name={x.name} gender={x.gender} hair={x.hair} eyes={x.eyes} src={x.src} />)}
+                </ul>
+            </div>
         </div>
+
 
 
 
