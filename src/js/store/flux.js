@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			], 
 			favoritesList: [
-				{name: "Luke Skywalker"}	
+				/* {name: "Luke Skywalker"} */	
 			] 
 		},
 		 
@@ -26,6 +26,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const favorites = store.favoritesList.filter(x => x.name !== nameToDelete);
 				setStore({favoritesList: favorites});
 			},
+
+			addFavorite: (nameToAdd) => {
+				const store = getStore();
+				const favorites = store.favoritesList;
+				favorites.push({name: nameToAdd});
+				setStore({favoritesList: favorites});
+			},
+
+		
 			
 			
 			// Use getActions to call a function within a fuction

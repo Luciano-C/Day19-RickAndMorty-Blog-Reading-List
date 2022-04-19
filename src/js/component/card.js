@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../../styles/card.css"
 
+
+import { Context } from "../store/appContext";
+
 export const Card = (props) => {
-    const [isFavorite, setIsfavorite] = useState(false);
+    /* const [isFavorite, setIsfavorite] = useState(false); */
+
+    const { store, actions } = useContext(Context);
 
 
-    const changeFavorite = () => {
+    const favoriteButtonHandler = (name) => {
+        const isFavorite = store.favoritesList.map(x => x.name).includes(name);
         if (isFavorite === true) {
-            setIsfavorite(false);
+            actions.deleteFavorite(name);
+           /*  setIsfavorite(false); */
         }
         else {
-            setIsfavorite(true)
+            actions.addFavorite(name);
+            /* setIsfavorite(true) */
         }
     }
+
+
     return (
         <div className="card">
             <img src={props.src} className="card-img-top" alt="..." />
@@ -23,7 +33,7 @@ export const Card = (props) => {
                 <p className="card-text text-start ps-3">Eye color: {props.eyes}</p>
                 <div className="d-flex justify-content-between align-items-center">
                     <button className="btn btn-grad">Learn More!</button>
-                    <span className="favorite" onClick={() => changeFavorite()}>{isFavorite ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</span>
+                    <span className="favorite" onClick={() => favoriteButtonHandler(props.name)}>{store.favoritesList.map(x => x.name).includes(props.name) ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</span>
                 </div>
 
             </div>
