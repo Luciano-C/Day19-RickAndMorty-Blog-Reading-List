@@ -10,9 +10,14 @@ export const Card = (props) => {
     const { store, actions } = useContext(Context);
 
 
+    const isFavorite = (name) => {
+        return store.favoritesList.map(x => x.name).includes(name);
+    };
+
+
     const favoriteButtonHandler = (name) => {
-        const isFavorite = store.favoritesList.map(x => x.name).includes(name);
-        if (isFavorite === true) {
+        
+        if (isFavorite(name) === true) {
             actions.deleteFavorite(name);
            /*  setIsfavorite(false); */
         }
@@ -33,7 +38,7 @@ export const Card = (props) => {
                 <p className="card-text text-start ps-3">Eye color: {props.eyes}</p>
                 <div className="d-flex justify-content-between align-items-center">
                     <button className="btn btn-grad">Learn More!</button>
-                    <span className="favorite" onClick={() => favoriteButtonHandler(props.name)}>{store.favoritesList.map(x => x.name).includes(props.name) ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</span>
+                    <span className="favorite" onClick={() => favoriteButtonHandler(props.name)}>{isFavorite(props.name) ? <i className="fas fa-heart"></i> : <i className="far fa-heart"></i>}</span>
                 </div>
 
             </div>
