@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Card } from "./card";
 import "../../styles/cardGroup.css"
 
+import { Context } from "../store/appContext";
 
 const CardGroup = (props) => {
-
-    let characters = [
-        { name: "Yoda", gender: "Male", hair: "Grey", eyes: "Green", src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yoda-1568794702.jpeg?crop=0.502xw:1.00xh;0.321xw,0&resize=640:*" },
-        { name: "Luke Skywalker", gender: "Male", hair: "Blonde", eyes: "Blue", src: "https://img.europapress.es/fotoweb/fotonoticia_20220207201450_1200.jpg" },
-        { name: "Ahsoka Tano", gender: "Female", hair: "White-Purple", eyes: "Blue", src: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2020/11/ahsoka-tano-star-wars-clone-wars-2146989.jpg?itok=-mcrg-Kz" }
-    ]
+    const { store, actions } = useContext(Context);
+    
+    const characters = store.characters;
 
     return (
         <div className="container d-flex flex-column text-start fst-italic fw-bold">
