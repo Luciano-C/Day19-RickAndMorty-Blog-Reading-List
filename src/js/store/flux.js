@@ -12,36 +12,47 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			], 
+			],
 			favoritesList: [
-				/* {name: "Luke Skywalker"} */	
-			] 
+				/* {name: "Luke Skywalker"} */
+			],
+
+			characters: [],
+
+			charactersURL: []
 		},
-		 
+
 
 		actions: {
-			
+
 			deleteFavorite: (nameToDelete) => {
 				const store = getStore();
 				const favorites = store.favoritesList.filter(x => x.name !== nameToDelete);
-				setStore({favoritesList: favorites});
+				setStore({ favoritesList: favorites });
 			},
 
 			addFavorite: (nameToAdd) => {
 				const store = getStore();
 				const favorites = store.favoritesList;
-				favorites.push({name: nameToAdd});
-				setStore({favoritesList: favorites});
+				favorites.push({ name: nameToAdd });
+				setStore({ favoritesList: favorites });
 			},
 
-		
-			
-			
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+
+			loadCharactersURL: () => {
+				fetch("https://www.swapi.tech/api/people?page=1&limit=100")
+					.then(response => response.json())
+					.then(result => setStore({charactersURL: result.results.map(x => x.url)}))
+					.then(console.log(getStore()))
+					.catch(error => console.log('error', error));
 			},
+			
+			
+			
+			
 			loadSomeData: () => {
+
+
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
