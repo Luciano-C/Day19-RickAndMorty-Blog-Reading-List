@@ -14,7 +14,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			favoritesList: [
-				/* {name: "Luke Skywalker"} */
 			],
 
 			characters: [
