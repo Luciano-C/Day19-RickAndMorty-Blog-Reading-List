@@ -23,29 +23,12 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			/* state.actions.loadSomeData(); */
-			state.actions.loadCharactersURL()
-			/* const SWCharacters = state.store.characters;
+			
+			//state.actions.loadCharacters()
+			
 			
 
-			fetch("https://www.swapi.tech/api/people")
-				.then(response => response.json())
-				.then(result => {
-					for (let i = 1; i <= result.total_records; i++) {
-						fetch(`https://www.swapi.tech/api/people/${i}`)
-							.then(response => response.json())
-							.then(result => SWCharacters.push(result))
-							.then(console.log(SWCharacters))
-							.catch(error => console.log('error', error));
-					}
-				})
-
-
-
-				.catch(error => console.log('error', error)); */
-
-
-
+		
 
 
 			/**

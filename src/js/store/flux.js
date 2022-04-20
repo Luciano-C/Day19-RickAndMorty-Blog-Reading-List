@@ -18,12 +18,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 
 			characters: [
-				{ name: "Rick Sanchez", gender: "Male", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
-				{ name: "Morty Smith", gender: "Male", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
-				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }
+				{ name: "Rick Sanchez", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
+				{ name: "Morty Smith", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
+				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" },
+				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" },
+				
 			],
 
-			charactersURL: []
+			
 		},
 
 
@@ -43,10 +45,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 
-			loadCharactersURL: () => {
-				fetch("https://www.swapi.tech/api/people?page=1&limit=100")
+			loadCharacters: () => {
+				fetch("https://rickandmortyapi.com/api/character/")
 					.then(response => response.json())
-					.then(result => setStore({ charactersURL: result.results.map(x => x.url) }))
+					.then(result => setStore({ characters: result.results}))
 					.then(console.log(getStore()))
 					.catch(error => console.log('error', error));
 			},

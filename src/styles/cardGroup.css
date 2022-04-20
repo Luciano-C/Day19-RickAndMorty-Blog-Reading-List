@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     overflow-x: scroll;
-    max-width: 80vw;
+    max-width: 80%;
+    
     scrollbar-color: purple rgb(26, 1, 73);
 }
 
