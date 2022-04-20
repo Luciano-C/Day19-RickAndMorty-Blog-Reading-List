@@ -1,6 +1,6 @@
 .card {
-    width: 20vw;
-    height: 26vw;
+    width: 18vw;
+    height: 32vw;
     background-color: gray;
     color:white;
     margin-right: 1.5vw;
@@ -16,7 +16,7 @@
     width: 2.5vw;
     height: 2.5vw;
     font-size: 1.3vw;
-    padding-top: 1%;
+    padding-top: 0.8%;
     border-radius: 0.3vw;
     margin:0vw 2vw 1vw 0;
     text-align: center;
@@ -55,7 +55,7 @@
 }
 
 .card-img-top {
-  height: 12vw;
+  height: 18vw;
   width: auto;
   object-fit: cover;
   

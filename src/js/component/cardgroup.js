@@ -10,7 +10,7 @@ const CardGroup = (props) => {
     const characters = store.characters;
 
     return (
-        <div className=" d-flex flex-column text-start fst-italic fw-bold">
+        <div className="d-flex flex-column text-start fst-italic fw-bold">
             <h2>{props.title}</h2>
             <div className="d-flex justify-content-center">
                 <ul className="cardGroupContainer">

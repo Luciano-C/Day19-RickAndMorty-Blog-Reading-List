@@ -24,7 +24,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			
-			//state.actions.loadCharacters()
+			state.actions.loadCharacters()
 			
 			
 

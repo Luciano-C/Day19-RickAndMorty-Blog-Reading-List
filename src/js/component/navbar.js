@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/navbar.css"
+import "../../styles/navbar.css";
+import logo from "../../img/logo.png"
+
 
 import { Context } from "../store/appContext";
 
@@ -23,7 +25,7 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar mb-3">
 			<Link to="/">
-				<img src="http://assets.stickpng.com/images/58f37720a4fa116215a9240f.png" className="logo ms-3" />
+				<img src={logo} className="logo ms-3" />
 			</Link>
 			<div className="ml-auto">
 
