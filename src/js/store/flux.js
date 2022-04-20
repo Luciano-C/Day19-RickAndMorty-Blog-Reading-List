@@ -18,9 +18,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 
 			characters: [
-				{ name: "Yoda", gender: "Male", hair: "Grey", eyes: "Green", src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yoda-1568794702.jpeg?crop=0.502xw:1.00xh;0.321xw,0&resize=640:*" },
-				{ name: "Luke Skywalker", gender: "Male", hair: "Blonde", eyes: "Blue", src: "https://img.europapress.es/fotoweb/fotonoticia_20220207201450_1200.jpg" },
-				{ name: "Ahsoka Tano", gender: "Female", hair: "White-Purple", eyes: "Blue", src: "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/950/public/media/image/2020/11/ahsoka-tano-star-wars-clone-wars-2146989.jpg?itok=-mcrg-Kz" }
+				{ name: "Rick Sanchez", gender: "Male", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
+				{ name: "Morty Smith", gender: "Male", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
+				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", src: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }
 			],
 
 			charactersURL: []

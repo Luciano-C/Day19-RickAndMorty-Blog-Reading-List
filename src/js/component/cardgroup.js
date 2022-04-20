@@ -14,7 +14,7 @@ const CardGroup = (props) => {
             <h2>{props.title}</h2>
             <div className="d-flex justify-content-center">
                 <ul className="cardGroupContainer">
-                    {characters.map((x, i) => <Card key={i} char_1="Gender" char_2="Hair" char_3="Eyes" name={x.name} gender={x.gender} hair={x.hair} eyes={x.eyes} src={x.src} />)}
+                    {characters.map((x, i) => <Card key={i} char_1="Status" char_2="Species" char_3="Gender" name={x.name} gender={x.gender} status={x.status} species={x.species} src={x.src} />)}
                 </ul>
             </div>
         </div>
