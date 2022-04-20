@@ -6,7 +6,6 @@ import { Context } from "../store/appContext";
 
 const CardGroup = (props) => {
     const { store, actions } = useContext(Context);
-    
     const characters = store.characters;
 
     return (

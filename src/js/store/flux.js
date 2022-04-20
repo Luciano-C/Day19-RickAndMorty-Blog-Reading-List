@@ -14,18 +14,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 			favoritesList: [
-				/* {name: "Luke Skywalker"} */
 			],
 
 			characters: [
-				{ name: "Rick Sanchez", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
+				/* { name: "Rick Sanchez", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg" },
 				{ name: "Morty Smith", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
 				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" },
-				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" },
-				
+				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }, */
+
 			],
 
-			
+
 		},
 
 
@@ -46,11 +45,44 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			loadCharacters: () => {
-				fetch("https://rickandmortyapi.com/api/character/")
+				/* 				const store = getStore();
+								const characters = store.characters;
+								let nextPage = 1;
+				
+								while (nextPage !== null) {
+									fetch(`https://rickandmortyapi.com/api/character/?page=${nextPage}`)
+										.then(response => response.json())
+										.then(result => characters.push(result.results))
+										.catch(error => console.log('error', error));
+				
+									nextPage++;
+								}
+				
+								console.log(getStore());
+								setStore({ characters: characters }) */
+								
+								const store = getStore();
+								let characters = store.characters;
+								
+								for (let i = 1; i <= 5; i++) {
+									fetch(`https://rickandmortyapi.com/api/character/?page=${i}`)
+										.then(response => response.json())
+										.then(result => characters.push(...result.results))
+										/* .then(result => setStore({ characters: result.results })) */
+										.then(() => setStore({ characters: characters }))
+										.catch(error => console.log('error', error));
+								}
+
+								console.log(getStore());
+								console.log(characters)
+								/* setStore({ characters: characters }) */
+
+
+				/* fetch("https://rickandmortyapi.com/api/character/")
 					.then(response => response.json())
-					.then(result => setStore({ characters: result.results}))
+					.then(result => setStore({ characters: result.results }))
 					.then(console.log(getStore()))
-					.catch(error => console.log('error', error));
+					.catch(error => console.log('error', error)); */
 			},
 
 
