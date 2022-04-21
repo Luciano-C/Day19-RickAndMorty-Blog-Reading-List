@@ -22,13 +22,8 @@ h2 {
 .inputDiv {
     align-self: center;
     margin-bottom: 2vw;
-    display: flex;
-    
+    display: flex;   
 }
-
-
-
-
 
 .inputButton {
     background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%);
