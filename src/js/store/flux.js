@@ -23,7 +23,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }, */
 			],
 
+			maxCharactersPages: undefined,
+
 			planets: [],
+
+			maxPlanetsPages: undefined,
 
 			
 			audio: new Audio("https://sndup.net/2www/d")
@@ -52,7 +56,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadCharacters: (page) => {
 				fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
 					.then(response => response.json())
-					.then(result => setStore({ characters: result.results }))
+					.then(result => {
+						setStore({ characters: result.results });
+						setStore({ maxCharactersPages: result.info.pages});
+					})
 					.then(console.log(getStore()))
 					.catch(error => console.log('error', error));
 				
@@ -77,10 +84,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadPlanets: (page) => {
 				fetch(`https://rickandmortyapi.com/api/location?page=${page}`)
 				.then(response => response.json())
-				.then(result => setStore({ planets: result.results }))
+				.then(result => {
+					setStore({ planets: result.results });
+					setStore({maxPlanetsPages: result.info.pages});
+				})
 				.then(console.log(getStore()))
 				.catch(error => console.log('error', error));
 			},
+
+
 
 
 
