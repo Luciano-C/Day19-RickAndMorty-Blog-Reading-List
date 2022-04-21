@@ -23,8 +23,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }, */
 			],
 
-			planets: []
+			planets: [],
 
+			
+			audio: new Audio("https://sndup.net/2www/d")
 
 		},
 
@@ -42,6 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const favorites = store.favoritesList;
 				favorites.push({ name: nameToAdd });
 				setStore({ favoritesList: favorites });
+				store.audio.play();
 			},
 
 
