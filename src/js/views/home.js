@@ -15,8 +15,8 @@ export const Home = () => {
 
 	return (
 		<div>
-            <CardGroup title="Characters" arrayToMap={store.characters} parameters={{mp0: "image", mp1: "status", mp2: "species", mp3: "gender"}}/>
-			<CardGroup title="Planets" arrayToMap={store.planets} parameters={{mp0: "", mp1: "type", mp2: "dimension", mp3: ""}}/>
+            <CardGroup title="Characters" arrayToMap={store.characters} parameters={{mp0: "image", mp1: "status", mp2: "species", mp3: "gender"}} maxInput="42" functionToLoad={actions.loadCharacters}/>
+			<CardGroup title="Planets" arrayToMap={store.planets} parameters={{mp0: "", mp1: "type", mp2: "dimension", mp3: ""}} maxInput="7" functionToLoad={actions.loadPlanets}/>
 		</div>
 	);
 };
