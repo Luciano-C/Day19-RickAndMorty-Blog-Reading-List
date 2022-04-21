@@ -21,8 +21,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				{ name: "Morty Smith", gender: "Male", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" },
 				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" },
 				{ name: "Summer Smith", gender: "Female", status: "Alive", species: "Human", image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg" }, */
-
 			],
+
+			planets: []
 
 
 		},
@@ -42,6 +43,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				favorites.push({ name: nameToAdd });
 				setStore({ favoritesList: favorites });
 			},
+
 
 
 			loadCharacters: () => {
@@ -67,6 +69,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			.then(result => setStore({ characters: result }))
 			.then(console.log(getStore()))
 			.catch(error => console.log('error', error)); */
+			},
+
+			loadPlanets: () => {
+				fetch("https://rickandmortyapi.com/api/location")
+				.then(response => response.json())
+				.then(result => setStore({ planets: result.results }))
+				.then(console.log(getStore()))
+				.catch(error => console.log('error', error));
 			},
 
 

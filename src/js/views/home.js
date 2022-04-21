@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/home.css";
 import CardGroup from "../component/cardgroup";
+import PlanetGroup from "../component/planetgroup";
 
 
 export const Home = () => {
@@ -13,7 +14,8 @@ export const Home = () => {
 
 	return (
 		<div>
-            <CardGroup title="Characters"/>
+            <CardGroup/>
+			<PlanetGroup/>
 		</div>
 	);
 };
