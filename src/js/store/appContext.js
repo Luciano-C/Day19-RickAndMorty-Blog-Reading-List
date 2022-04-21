@@ -23,9 +23,8 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			
 			state.actions.loadCharacters(1);
-			state.actions.loadPlanets();
+			state.actions.loadPlanets(1);
 
 		/* 	let string = "1";
 			for (let i = 2; i <= 826; i++) {

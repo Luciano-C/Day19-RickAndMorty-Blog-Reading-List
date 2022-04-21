@@ -2,16 +2,17 @@ import React, { useState, useContext } from "react";
 import { Card } from "./card";
 import "../../styles/cardGroup.css"
 
-/* import { Context } from "../store/appContext"; */
+import { Context } from "../store/appContext";
 
 const CardGroup = (props) => {
+    
     const arrayToMap = props.arrayToMap;
     const mapParameters = props.parameters;
-
-    
+    const maxInput = props.maxInput;
     const functionToLoad = props.functionToLoad;
+    
     const [page, setPage] = useState(1);
-    const [aditionalText, setAditionalText] = useState(`(Page 1 of ${props.maxInput})`)
+    
     
     
     const inputButtonHandler = (page) => {
@@ -20,7 +21,7 @@ const CardGroup = (props) => {
         }
         else {
             functionToLoad(page)
-            setAditionalText(`(Page ${page} of ${props.maxInput})`)
+            setAditionalText(`(Page ${page} of ${maxInput})`)
         }
     }
 
@@ -28,7 +29,7 @@ const CardGroup = (props) => {
 
     return (
         <div className="d-flex flex-column fst-italic fw-bold">
-            <h2>{props.title} {aditionalText}</h2>
+            <h2>{props.title} {`(Page 1 of ${maxInput})`}</h2>
             <div className="inputDiv">
                 <input type="number" min="1" max={props.maxInput} onChange={(e) => setPage(e.target.value)} placeholder="Number of page."/>
                 <button className="inputButton" onClick={() => inputButtonHandler(page)}>Set page</button>
