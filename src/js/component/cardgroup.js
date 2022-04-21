@@ -11,8 +11,9 @@ const CardGroup = (props) => {
     const maxInput = props.maxInput;
     const functionToLoad = props.functionToLoad;
     
+    const [inputValue, setInputValue] = useState("");
     const [page, setPage] = useState(1);
-    
+    const aditionalText = useState(`(Page 1 of ${maxInput})`)
     
     
     const inputButtonHandler = (page) => {
@@ -20,8 +21,10 @@ const CardGroup = (props) => {
             alert("Ingrese un número válido de página")
         }
         else {
-            functionToLoad(page)
-            setAditionalText(`(Page ${page} of ${maxInput})`)
+            setPage(inputValue)
+            functionToLoad(inputValue)
+            
+            /* setAditionalText(`(Page ${page} of ${maxInput})`) */
         }
     }
 
@@ -29,9 +32,9 @@ const CardGroup = (props) => {
 
     return (
         <div className="d-flex flex-column fst-italic fw-bold">
-            <h2>{props.title} {`(Page 1 of ${maxInput})`}</h2>
+            <h2>{props.title} {`(Page ${page} of ${maxInput})`}</h2>
             <div className="inputDiv">
-                <input type="number" min="1" max={props.maxInput} onChange={(e) => setPage(e.target.value)} placeholder="Number of page."/>
+                <input type="number" min="1" max={props.maxInput} onChange={(e) => setInputValue(e.target.value)} placeholder="Number of page"/>
                 <button className="inputButton" onClick={() => inputButtonHandler(page)}>Set page</button>
             </div>
             <div className="d-flex justify-content-center">
