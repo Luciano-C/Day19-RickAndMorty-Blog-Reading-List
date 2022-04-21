@@ -34,7 +34,7 @@ const CardGroup = (props) => {
         <div className="d-flex flex-column fst-italic fw-bold">
             <h2>{props.title} {`(Page ${page} of ${maxInput})`}</h2>
             <div className="inputDiv">
-                <input type="number" min="1" max={props.maxInput} onChange={(e) => setInputValue(e.target.value)} placeholder="Number of page"/>
+                <input type="number" min="1" max={props.maxInput} onChange={(e) => setInputValue(e.target.value)} placeholder="Page number"/>
                 <button className="inputButton" onClick={() => inputButtonHandler(page)}>Set page</button>
             </div>
             <div className="d-flex justify-content-center">
