@@ -1,17 +1,55 @@
-
-
 .cardGroupContainer {
     display: flex;
     justify-content: left;
     overflow-x: scroll;
     max-width: 80%;
-    
+
     scrollbar-color: purple rgb(26, 1, 73);
 }
 
 
 h2 {
-    font-weight:700;
-    margin-bottom: 2vw;
+    font-weight: 700;
+    margin-bottom: 1.5vw;
+    align-self: center;
+    background: linear-gradient(to top, #30CFD0 0%, #30d0d0b0 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
+
+.inputDiv {
+    align-self: center;
+    margin-bottom: 2vw;
+    display: flex;
+    
+}
+
+
+
+
+
+.inputButton {
+    background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 5px;
+    display: block;
+}
+
+.inputButton:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+input {
+    background-color: lightblue;
+    margin-right: 2vw;
+}

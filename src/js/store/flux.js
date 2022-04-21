@@ -46,8 +46,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 
-			loadCharacters: () => {
-				fetch("https://rickandmortyapi.com/api/character/")
+			loadCharacters: (page) => {
+				fetch(`https://rickandmortyapi.com/api/character/?page=${page}`)
 					.then(response => response.json())
 					.then(result => setStore({ characters: result.results }))
 					.then(console.log(getStore()))
@@ -71,8 +71,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			.catch(error => console.log('error', error)); */
 			},
 
-			loadPlanets: () => {
-				fetch("https://rickandmortyapi.com/api/location")
+			loadPlanets: (page) => {
+				fetch(`https://rickandmortyapi.com/api/location?page=${page}`)
 				.then(response => response.json())
 				.then(result => setStore({ planets: result.results }))
 				.then(console.log(getStore()))

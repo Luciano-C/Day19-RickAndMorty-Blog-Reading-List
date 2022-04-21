@@ -24,7 +24,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			
-			state.actions.loadCharacters();
+			state.actions.loadCharacters(1);
 			state.actions.loadPlanets();
 
 		/* 	let string = "1";

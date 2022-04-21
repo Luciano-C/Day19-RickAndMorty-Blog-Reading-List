@@ -4,15 +4,6 @@
     object-fit: cover;
 }
 
-
-.navbar {
-    background-image: url("../img/teahub.io-cat-wallpaper-47064-editado.JPG");
-    background-size: cover;
-    
-    /* border: solid purple 1px; */
-    
-}
-
 .favorites-button {
     margin-right: 10vw;
 }
