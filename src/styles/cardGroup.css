@@ -12,10 +12,11 @@ h2 {
     font-weight: 700;
     margin-bottom: 1.5vw;
     align-self: center;
-    background: linear-gradient(to top, #30CFD0 0%, #30d0d0b0 100%);
+    background: linear-gradient(to top, #90e0e0 0%, #3ae0e0c5 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+   
 }
 
 
