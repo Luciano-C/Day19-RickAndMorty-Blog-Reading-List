@@ -45,37 +45,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 
 			loadCharacters: () => {
-				/* 						
-								
-								for (let i = 1; i <= 5; i++) {
-									fetch(`https://rickandmortyapi.com/api/character/?page=${i}`)
-										.then(response => response.json())
-										.then(result => characters.push(...result.results))
-										.then(result => setStore({ characters: result.results })) 
-										.then(() => setStore({ characters: characters }))
-										.catch(error => console.log('error', error));
-								}
-
-								console.log(getStore());
-								console.log(characters) */
-				/* setStore({ characters: characters }) */
-
-
-				/* 		let fetchParameter = "";
-						for (let i = 1; i <= 826; i++) {
-							fetchParameter += `,${i}`
-						}
-		
-						fetch(`https://rickandmortyapi.com/api/character/${fetchParameter}`)
-							.then(response => response.json())
-							.then(result => setStore({ characters: result }))
-							.then(console.log(getStore()))
-							.catch(error => console.log('error', error)); */
 				fetch("https://rickandmortyapi.com/api/character/")
 					.then(response => response.json())
 					.then(result => setStore({ characters: result.results }))
 					.then(console.log(getStore()))
 					.catch(error => console.log('error', error));
+				
+				
+				
+				
+				
+					/* let fetchParameter = "1";
+		for (let i = 2; i <= 100; i++) {
+			fetchParameter += `,${i}`
+		}
+
+		
+		
+		fetch(`https://rickandmortyapi.com/api/character/${fetchParameter}`)
+			.then(response => response.json())
+			.then(result => setStore({ characters: result }))
+			.then(console.log(getStore()))
+			.catch(error => console.log('error', error)); */
 			},
 
 
