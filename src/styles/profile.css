@@ -17,7 +17,7 @@ ul {
     margin-top: 3vw;
 }
 
-li {
+.profile-list-item {
     font-size: 1.5vw;
     background: linear-gradient(to top, #90e0e0 0%, #3ae0e0c5 100%);
     background-clip: border-box;
