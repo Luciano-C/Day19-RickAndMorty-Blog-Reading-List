@@ -16,8 +16,8 @@ const CardGroup = (props) => {
     const aditionalText = useState(`(Page 1 of ${maxInput})`)
     
     
-    const inputButtonHandler = (page) => {
-        if (page > Number(props.maxInput) || page < 1) {
+    const inputButtonHandler = () => {
+        if (inputValue > Number(props.maxInput) || inputValue < 1) {
             alert("Ingrese un número válido de página")
         }
         else {
@@ -35,7 +35,7 @@ const CardGroup = (props) => {
             <h2>{props.title} {`(Page ${page} of ${maxInput})`}</h2>
             <div className="inputDiv">
                 <input type="number" min="1" max={props.maxInput} onChange={(e) => setInputValue(e.target.value)} placeholder="Page number"/>
-                <button className="inputButton" onClick={() => inputButtonHandler(page)}>Set page</button>
+                <button className="inputButton" onClick={() => inputButtonHandler()}>Set page</button>
             </div>
             <div className="d-flex justify-content-center">
                 <ul className="cardGroupContainer">
