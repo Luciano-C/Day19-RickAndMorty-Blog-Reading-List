@@ -1,0 +1,28 @@
+.profile-container {
+
+    width: 60vw;
+    height: 35vw;
+    padding: 3vw;
+    justify-content: space-between;
+    background-color: rgba(32, 10, 83, 0.8);
+    border: black solid 1px;
+}
+
+img {
+    border: black solid 1px;
+}
+
+ul {
+    color: white;
+    margin-top: 3vw;
+}
+
+li {
+    font-size: 1.5vw;
+    background: linear-gradient(to top, #90e0e0 0%, #3ae0e0c5 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    margin-right: 2vw;
+    
+}
