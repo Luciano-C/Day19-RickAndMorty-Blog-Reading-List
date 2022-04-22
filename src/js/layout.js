@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import Perfil from "./views/perfil";
+import LearnMore from "./views/learnmore";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -28,7 +29,11 @@ const Layout = () => {
 							<Home />
 						</Route>
 
-						<Route exact path="/perfil/:posicion">
+						<Route exact path="/learnmore/:position">
+							<LearnMore/>
+						</Route>
+
+						<Route exact path="/perfil/:position">
 							<Perfil/>
 						</Route>
 
