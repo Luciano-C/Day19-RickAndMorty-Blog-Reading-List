@@ -5,8 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
-import Perfil from "./views/perfil";
-import LearnMore from "./views/learnmore";
+import Profile from "./views/profile";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -29,13 +28,10 @@ const Layout = () => {
 							<Home />
 						</Route>
 
-						<Route exact path="/learnmore/:position">
-							<LearnMore/>
+						<Route exact path="/profile/:position">
+							<Profile/>
 						</Route>
 
-						<Route exact path="/perfil/:position">
-							<Perfil/>
-						</Route>
 
 						<Route exact path="/demo">
 							<Demo />
