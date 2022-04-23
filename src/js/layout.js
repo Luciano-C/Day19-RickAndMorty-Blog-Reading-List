@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import Profile from "./views/profile";
 import PlanetProfile from "./views/planetProfile";
 import injectContext from "./store/appContext";
+import NotFound from "./views/notFound";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -35,10 +36,8 @@ const Layout = () => {
 							<PlanetProfile/>
 						</Route>
 
-
-
 						<Route>
-							<h1>Not found!</h1>
+							<NotFound/>
 						</Route>
 					</Switch>
 					<Footer />
