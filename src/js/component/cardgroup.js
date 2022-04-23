@@ -12,9 +12,7 @@ const CardGroup = (props) => {
     const functionToLoad = props.functionToLoad;
     
     const [inputValue, setInputValue] = useState("");
-    /* const [page, setPage] = useState(1); */
-    
-    
+
     
     const inputButtonHandler = () => {
         if (inputValue > Number(props.maxInput) || inputValue < 1) {
@@ -23,8 +21,6 @@ const CardGroup = (props) => {
         else {
             props.setPage(inputValue)
             functionToLoad(inputValue)
-            
-            /* setAditionalText(`(Page ${page} of ${maxInput})`) */
         }
     }
 

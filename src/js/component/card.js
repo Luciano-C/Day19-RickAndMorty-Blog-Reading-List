@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Card = (props) => {
-    /* const [isFavorite, setIsfavorite] = useState(false); */
-
     const { store, actions } = useContext(Context);
 
 
@@ -20,11 +18,10 @@ export const Card = (props) => {
 
         if (isFavorite(name) === true) {
             actions.deleteFavorite(name);
-            /*  setIsfavorite(false); */
+            
         }
         else {
             actions.addFavorite(name);
-            /* setIsfavorite(true) */
         }
     }
 

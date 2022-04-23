@@ -29,7 +29,6 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 
-				{/* <button className="btn btn-primary me-5">Favorites</button> */}
 				<div className="btn-group favorites-button">
 					<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
 						Favorites ({store.favoritesList.length})
