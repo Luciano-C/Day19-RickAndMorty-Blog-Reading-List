@@ -7,6 +7,7 @@ const Profile = () => {
     const { position } = useParams();
     const [character, setCharacter] = useState();
 
+    // useEffect hace fetch de personaje con la posición de router
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/${position}`)
         .then(response => response.json())

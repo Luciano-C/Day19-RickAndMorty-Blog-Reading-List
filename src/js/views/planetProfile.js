@@ -6,7 +6,7 @@ import "../../styles/profile.css"
 const PlanetProfile = () => {
     const { position } = useParams();
     const [planet, setCharacter] = useState();
-
+// useEffect hace fetch de personaje con la posición de router
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/location/${position}`)
         .then(response => response.json())

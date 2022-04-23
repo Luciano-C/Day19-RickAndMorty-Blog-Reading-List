@@ -13,7 +13,7 @@ const CardGroup = (props) => {
     
     const [inputValue, setInputValue] = useState("");
 
-    
+    // Manejo de páginas. maxinput corresponde al máximo de páginas en la api, estas son obtenidas con fetch en info y se almacenan en store
     const inputButtonHandler = () => {
         if (inputValue > Number(props.maxInput) || inputValue < 1) {
             alert("Ingrese un número válido de página")
@@ -25,7 +25,8 @@ const CardGroup = (props) => {
     }
 
 
-
+// Se mapea y se entregan las características necesarias al componente Card
+// index se calcula en función de la página e índice (i).
     return (
         <div className="d-flex flex-column fst-italic fw-bold">
             <h2>{props.title} {`(Page ${props.page} of ${maxInput})`}</h2>

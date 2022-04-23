@@ -22,6 +22,7 @@ export const Navbar = () => {
 
 	const { store, actions } = useContext(Context);
 
+	// Dropdown mapea favoritos que vienen de store
 	return (
 		<nav className="navbar mb-3">
 			<Link to="/">

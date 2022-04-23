@@ -8,11 +8,10 @@ import { Context } from "../store/appContext";
 export const Card = (props) => {
     const { store, actions } = useContext(Context);
 
-
+// Funcionalidad para favoritos
     const isFavorite = (name) => {
         return store.favoritesList.map(x => x.name).includes(name);
     };
-
 
     const favoriteButtonHandler = (name) => {
 
@@ -25,7 +24,8 @@ export const Card = (props) => {
         }
     }
 
-
+// Ternarios en Card para poder utilizar diferentes características para Cards de personajes y Cards de planetas.
+// Link tiene como entrada(props) si el tipo de carta es personaje o planeta.
     return (
         <div className="card">
             {props.src !== undefined ? <img src={props.src} className="card-img-top" alt="..." /> : <></>}
