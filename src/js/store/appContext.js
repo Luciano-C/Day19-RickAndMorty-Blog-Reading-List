@@ -26,16 +26,7 @@ const injectContext = PassedComponent => {
 			state.actions.loadCharacters(1);
 			state.actions.loadPlanets(1);
 
-		/* 	let string = "1";
-			for (let i = 2; i <= 826; i++) {
-				string += `,${i}`
-			}
-			console.log(string) */
-			
-			
-
 		
-
 
 			/**
 			 * EDIT THIS!

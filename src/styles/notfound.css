@@ -1,0 +1,12 @@
+.mbp-image {
+    height: 30vw;
+    width: 30vw;
+}
+
+.oohwee {
+    background: linear-gradient(to top, #90e0e0 0%, #3ae0e0c5 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

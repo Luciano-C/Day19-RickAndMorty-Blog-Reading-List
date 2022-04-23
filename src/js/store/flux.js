@@ -30,7 +30,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			maxPlanetsPages: undefined,
 
 			
-			audio: new Audio("https://sndup.net/2www/d")
+			audio: new Audio("https://sndup.net/2www/d"),
+
+			currentPage: 1,
+
+			currentPlanetPage: 1
 
 		},
 
@@ -63,22 +67,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(console.log(getStore()))
 					.catch(error => console.log('error', error));
 				
-				
-				
-				
-				
-					/* let fetchParameter = "1";
-		for (let i = 2; i <= 100; i++) {
-			fetchParameter += `,${i}`
-		}
-
-		
-		
-		fetch(`https://rickandmortyapi.com/api/character/${fetchParameter}`)
-			.then(response => response.json())
-			.then(result => setStore({ characters: result }))
-			.then(console.log(getStore()))
-			.catch(error => console.log('error', error)); */
 			},
 
 			loadPlanets: (page) => {
@@ -92,33 +80,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch(error => console.log('error', error));
 			},
 
+			setCurrentPage: (newPage) => {
+				setStore({currentPage: newPage})
 
-
-
-
-
-
-			loadSomeData: () => {
-
-
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
 			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
+			setCurrentPlanetPage: (newPage) => {
+				setStore({currentPlanetPage: newPage})
 
-				//reset the global store
-				setStore({ demo: demo });
-			}
+			},
+
 		}
 	};
 };
