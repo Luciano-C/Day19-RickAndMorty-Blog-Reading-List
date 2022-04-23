@@ -38,7 +38,7 @@ export const Card = (props) => {
                 <p className="card-text text-start ps-3">{props.char_2}{props.char_2 !== undefined ? ":" : ""} {props.value_2}</p>
                 <p className="card-text text-start ps-3">{props.char_3}{props.char_3 !== undefined ? ":" : ""} {props.value_3}</p>
                 <div className="d-flex justify-content-between align-items-center button-container">
-                    <Link to={`/${props.cardType}/` + props.index}>
+                    <Link to={`/${props.cardType}/` + props.index} style={{ textDecoration: 'none' }}>
                         <button className="btn btn-grad">Learn More!</button>
                     </Link>
 
