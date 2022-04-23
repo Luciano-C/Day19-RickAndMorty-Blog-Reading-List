@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import Profile from "./views/profile";
+import PlanetProfile from "./views/planetProfile";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -30,6 +31,10 @@ const Layout = () => {
 
 						<Route exact path="/profile/:position">
 							<Profile/>
+						</Route>
+
+						<Route exact path="/planetProfile/:position">
+							<PlanetProfile/>
 						</Route>
 
 
